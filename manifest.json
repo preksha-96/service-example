@@ -52,6 +52,11 @@
         "title": "VTEX App Token key",
         "description": "Enter the app token from user & rules",
         "type": "string"
+      },
+      "recaptchaKey": {
+        "title": "VTEX App Token key",
+        "description": "Enter the app token from user & rules",
+        "type": "string"
       }
     }
   },

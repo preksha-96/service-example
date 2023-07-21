@@ -6,6 +6,7 @@ import { status } from './middlewares/status'
 import { validate } from './middlewares/validate'
 import { getContacts } from './middlewares/contact'
 import { updateContact,deleteContact } from './middlewares/update-contact'
+import { getCaptcha } from './middlewares/captcha'
 
 const TIMEOUT_MS = 800
 
@@ -57,6 +58,9 @@ export default new Service({
       DELETE:[deleteContact]
 
     }),
+    captcha:method({
+      GET:[getCaptcha]
+    })
    
   },
 })

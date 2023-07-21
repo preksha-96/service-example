@@ -51,4 +51,11 @@ export default class Contact extends ExternalClient {
       },
     }
   }
+  public async getCaptchadetails() {
+    const app = new Apps(this.context)
+    let settings = await app.getAppSettings(process.env.VTEX_APP_ID ?? '')
+    return {
+      sitekey:settings.recaptchaKey
+    }
+  }
 }
