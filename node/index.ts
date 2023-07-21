@@ -4,6 +4,8 @@ import { LRUCache, method, Service } from '@vtex/api'
 import { Clients } from './clients'
 import { status } from './middlewares/status'
 import { validate } from './middlewares/validate'
+import { getContacts } from './middlewares/contact'
+import { updateContact,deleteContact } from './middlewares/update-contact'
 
 const TIMEOUT_MS = 800
 
@@ -40,6 +42,7 @@ declare global {
   }
 }
 
+
 // Export a service that defines route handlers and client options.
 export default new Service({
   clients,
@@ -48,5 +51,12 @@ export default new Service({
     status: method({
       GET: [validate, status],
     }),
+    contact: method({
+      GET: [getContacts],
+      PATCH:[updateContact],
+      DELETE:[deleteContact]
+
+    }),
+   
   },
 })

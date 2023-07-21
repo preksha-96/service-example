@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+      "id": { "type": "number" },
+      "firstname": { "type": "string" },
+      "lastname": { "type": "string" },
+      "subject": { "type": "string" },
+      "age": { "type": "number" },
+      "message": { "type": "string" }
+    }
+  }
+  

@@ -7,7 +7,11 @@
   "workers": 1,
   "routes": {
     "status": {
-      "path": "/_v/status/:code",
+      "path": "/_v/status/:code",  
+      "public": true
+    },
+    "contact": {
+      "path": "/contact/:id",
       "public": true
     }
   }

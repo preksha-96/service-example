@@ -4,12 +4,10 @@ export async function status(ctx: Context, next: () => Promise<any>) {
     clients: { status: statusClient },
   } = ctx
 
-  console.info('Received code:', code)
 
   const statusResponse = await statusClient.getStatus(code)
 
   console.info('Status response:', statusResponse)
-
   const {
     headers,
     data,
